@@ -6,30 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <style>
-        .in-form{
+        body{
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.425),rgba(0, 0, 0, 0.267)),url(bg.jpg);
+            background-size: cover;
+            width: 98%;
+            height: 98%;
+        }
+        .screen {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
+            height: 97vh;
         }
-        .display {
-            display: block;
-            margin: auto;
-            min-width: 20rem;
-            max-width: fit-content;
-            background-color: rgb(216, 96, 96);
-            min-height: 5rem;
-        }
+        .display{
 
-        .btn {
-            display: inline;
+            font-size: 2rem;
+            color: white;
+            min-width: 20rem;
+            width: fit-content;
+            height: 3rem;
+            background-color: rgba(255, 255, 255, 0.24);
+            padding: 1rem;
         }
+        .input{
+            border: 1px solid whitesmoke;
+            font-size: 1.5rem;
+            color: white;
+            width: 20rem;
+            height: 2rem;
+            background-color: rgba(255, 255, 255, 0.24);
+            padding: 1rem;
+         }
+         h1,h3{
+            color: white;
+         }
+        
     </style>
 </head>
 
 <body>
-            <input id="input-num" value="" type="number" required>
+    
+    <div class="screen">
+        <h1>NUMBER TO WORD CONVERTER</h1>
+        <br>
+        <h3>WRITE NUMBER BETWEEN 0 TO 10000000000</h3>
+        <p id="display" class="display"></p>
+        <input id="myInput" oninput="myFunction()" class="input" placeholder="NUMBER" type="number" required>
 
-    <div class="display" id="display"></div>
+    </div>
 
 
 
